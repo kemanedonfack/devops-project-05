@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: "http://spring-api:9090/api/tutorials",
+  apiBaseUrl: "https://spring-api:9090/api/tutorials",
 };
