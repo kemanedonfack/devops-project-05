@@ -8,6 +8,6 @@ RUN npm run build --prod
 
 # Étape 2 : Exécution de l'application
 FROM nginx:1.21.3-alpine
-COPY --from=build /app/dist/my-app /usr/share/nginx/html
+COPY --from=build /app/dist/angular-14-crud-example /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
