@@ -6,14 +6,22 @@ services:
     restart: always
     ports:
       - 9090:9090
+    networks:
+      - my-network
 
   angular-ui:
     build: ./angular-14-crud-example
     restart: always
     ports:
      - 5050:80
+    networks:
+      - my-network
     depends_on:
      - spring-api
     links:
      - spring-api
-
+     
+networks:
+  my-network:
+    driver: bridge
+ 
