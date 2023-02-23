@@ -22,8 +22,6 @@ services:
      - spring-api
     tty: true
     stdin_open: true
-    links:
-     - spring-api
      
 networks:
   my-network:
