@@ -1,10 +1,9 @@
-#stage 1
-FROM node:latest as build
-WORKDIR /usr/local/app
-COPY ./ /usr/local/app
-RUN npm install
-RUN npm run build
-#stage 2
-FROM nginx:latest
-COPY --from=build /usr/local/app/dist/angular-14-crud-example /usr/share/nginx/html
+FROM node:14.9.0
+WORKDIR /app
+COPY . .
+RUN npm install -g @angular/cli
+RUN ng build --prod
+FROM nginx:stable-alpine
+COPY --from=0 /app/dist/ /usr/share/nginx/html
 EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
