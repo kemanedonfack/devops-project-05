@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
+import { environment } from 'src/environments/environment.prod';
 
-const baseUrl = 'http://sping:9090/api/tutorials';
+const baseUrl = environment.apiBaseUrl;;
 
 @Injectable({
   providedIn: 'root'
