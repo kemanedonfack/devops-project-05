@@ -1,0 +1,19 @@
+version: '3'
+services:
+  
+  spring-api:
+    build: ./spring-boot-h2-database-crud
+    restart: always
+    ports:
+      - 9090:9090
+
+  angular-ui:
+    build: ./angular-14-crud-example
+    restart: always
+    ports:
+     - 5050:80
+    depends_on:
+     - spring-api
+    links:
+     - spring-api
+
