@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   apiBaseUrl: "localhost:9090/api/tutorials",
 };
