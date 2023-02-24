@@ -20,8 +20,6 @@ services:
       - my-network
     depends_on:
      - spring-api
-    tty: true
-    stdin_open: true
      
 networks:
   my-network:
