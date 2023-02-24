@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: lugar2020/backend
+        image: lugar2020/frontend
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5050
