@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bezkoder.spring.jpa.h2.model.Tutorial;
 import com.bezkoder.spring.jpa.h2.repository.TutorialRepository;
 
-@CrossOrigin(origins = {"http://localhost:9090", "http://spring-api:9090"})
+@CrossOrigin(origins = {"http://localhost:5050", "http://spring-api:5050"})
 @RestController
 @RequestMapping("/api")
 public class TutorialController {
