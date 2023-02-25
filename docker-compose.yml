@@ -20,6 +20,8 @@ services:
       - my-network
     depends_on:
      - spring-api
+   environment:
+     BACKEND_HOST: spring-api:9090
      
 networks:
   my-network:
