@@ -40,3 +40,13 @@ build_angular_image:
     - docker build -t $FRONTEND_IMAGE_NAME .
     - docker push $FRONTEND_IMAGE_NAME
 
+deploy_application:
+  stage: deploy
+  image: devth/helm:latest
+  before_script:
+    - cd helm/
+  script: 
+    - docker build -t $FRONTEND_IMAGE_NAME .
+    - docker push $FRONTEND_IMAGE_NAME  
+  
+
