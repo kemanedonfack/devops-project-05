@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
-import { environment } from 'src/environments/environment.local';
+import { environment } from 'src/environments/environment.prod';
 
 const baseUrl = environment.apiBaseUrl;;
 
