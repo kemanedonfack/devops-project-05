@@ -46,7 +46,7 @@ deploy_application:
   before_script:
     - cd helm/
   script: 
-    - docker build -t $FRONTEND_IMAGE_NAME .
-    - docker push $FRONTEND_IMAGE_NAME  
+    - helm install frontend angular-frontend
+    - helm install backend spring-backend
   
 
