@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 5050
+  port: 80
   nodePort: 30006
 
 ingress:
