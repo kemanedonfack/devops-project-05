@@ -41,10 +41,15 @@ build_angular_image:
     - docker push $FRONTEND_IMAGE_NAME
 
 deploy_application:
+  variables:
+    KUBE_CONTEXT: kemanedonfack/devops-project-05:k8s-cluster
   stage: deploy
   image: devth/helm:latest
   before_script:
     - cd helm/
+    - kubectl config get-contexts
+    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+    - kubectl config use-context "$KUBE_CONTEXT"
   script: 
     - helm install frontend angular-frontend
     - helm install backend spring-backend
