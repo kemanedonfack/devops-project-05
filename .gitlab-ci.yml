@@ -54,3 +54,4 @@ deploy_application:
     - helm install frontend angular-frontend
     - helm install backend spring-backend
   
+
