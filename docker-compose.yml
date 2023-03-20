@@ -21,7 +21,7 @@ services:
     depends_on:
      - spring-api
     environment:
-      API_URL: localhost:1010
+      API_URL: "http://localhost:9090/api/tutorials"
      
 networks:
   my-network:
