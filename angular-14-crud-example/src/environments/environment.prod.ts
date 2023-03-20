@@ -5,5 +5,5 @@
 
 export const environment = {
   production: true,
-  apiBaseUrl: window["env"]["apiUrl"] || "default",
+  apiBaseUrl: (window as { [key: string]: any })["env"]["apiUrl"] || "default",
 };
