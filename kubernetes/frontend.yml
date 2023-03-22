@@ -20,6 +20,9 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
+        env:
+        - name: API_URL
+          value: "http://localhost:9090/api/tutorials"
 
 ---
 
