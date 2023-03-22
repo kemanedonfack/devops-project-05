@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: lugar2020/backend
+        image: lugar2020/spring-backend
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9090
