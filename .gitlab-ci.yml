@@ -40,9 +40,8 @@ deploy_application:
   before_script:
     - cd helm/
     - kubectl config get-contexts
-    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+    - kubectl config use-context kemanedonfack/microservice-app-deployment:k8s-cluster
   script: 
-    - helm install frontend angular-frontend
+    - helm install --set-string BACKEND_PUBLIC_ACCESS=$BACKEND_PUBLIC_ACCESS frontend angular-frontend
     - helm install backend spring-backend
   
-
